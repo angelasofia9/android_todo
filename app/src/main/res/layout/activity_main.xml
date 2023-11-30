@@ -1,64 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/th"
+        android:scaleType="centerCrop"
+        android:contentDescription="Imagen Principal"/>
 
     <TextView
-        android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lista de Elementos"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:padding="16dp"/>
+        android:text="¡Bienvenido a mi aplicación!"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="8dp"/>
 
-    <ListView
-        android:id="@+id/listView"
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp" />
+        android:hint="Ingrese su nombre"
+        android:padding="8dp"
+        android:inputType="textPersonName"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ok"
+        android:onClick="saludar"/>
 
     <TextView
-        android:id="@+id/textViewDetailTitle"
+        android:id="@+id/textSaludo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detalles del Elemento"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:padding="16dp"
-        android:visibility="gone"/>
+        android:text=""
+        android:paddingTop="16dp"/>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayoutDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone">
 
-        <!-- Agrega aquí los elementos para mostrar los detalles del elemento -->
-
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/textViewGridTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Imágenes en Grid"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:padding="16dp"/>
-
-    <GridView
-        android:id="@+id/gridView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="2"
-        android:columnWidth="150dp"
-        android:verticalSpacing="8dp"
-        android:horizontalSpacing="8dp"
-        android:stretchMode="columnWidth"/>
 
 </LinearLayout>
